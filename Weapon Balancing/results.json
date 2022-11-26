@@ -1,0 +1,112 @@
+{
+    "Crossbow": {
+        "Damage": 11.842105263157896,
+        "Accuracy": 11.538461538461538,
+        "Range": 5.909090909090909,
+        "Rate of fire": 8.88888888888889,
+        "Reload speed": 9.5,
+        "Recoil": 11.578947368421053,
+        "Ammo capacity": 9.23076923076923,
+        "Projectile speed": 10.0
+    },
+    "Flamethrower": {
+        "Damage": 5.2631578947368425,
+        "Accuracy": 5.0,
+        "Range": 4.482758620689655,
+        "Rate of fire": -1.3333333333333333,
+        "Reload speed": -2.9411764705882355,
+        "Recoil": 0.0,
+        "Ammo capacity": 2.2222222222222223,
+        "Projectile speed": 3.125
+    },
+    "Grenade launcher": {
+        "Damage": 7.5,
+        "Accuracy": 8.0,
+        "Range": 7.333333333333333,
+        "Rate of fire": 8.947368421052632,
+        "Reload speed": 9.6875,
+        "Recoil": 7.142857142857143,
+        "Ammo capacity": 6.956521739130435,
+        "Projectile speed": 8.88888888888889
+    },
+    "HMG": {
+        "Damage": 10.256410256410257,
+        "Accuracy": 10.666666666666666,
+        "Range": 9.23076923076923,
+        "Rate of fire": 11.764705882352942,
+        "Reload speed": 11.428571428571429,
+        "Recoil": 11.0,
+        "Ammo capacity": 13.529411764705882,
+        "Projectile speed": 10.555555555555555
+    },
+    "Knife": {
+        "Damage": -9.23076923076923,
+        "Accuracy": -7.5,
+        "Range": -12.162162162162161,
+        "Rate of fire": -10.454545454545455,
+        "Reload speed": -10.0,
+        "Recoil": -10.76923076923077,
+        "Ammo capacity": -9.23076923076923,
+        "Projectile speed": -10.0
+    },
+    "Revolver": {
+        "Damage": 8.333333333333334,
+        "Accuracy": 11.27659574468085,
+        "Range": 10.0,
+        "Rate of fire": 8.636363636363637,
+        "Reload speed": 8.695652173913043,
+        "Recoil": 9.2,
+        "Ammo capacity": 9.473684210526315,
+        "Projectile speed": 9.047619047619047
+    },
+    "Rocket launcher": {
+        "Damage": -2.3333333333333335,
+        "Accuracy": 1.9230769230769231,
+        "Range": -3.5294117647058822,
+        "Rate of fire": 4.666666666666667,
+        "Reload speed": 6.190476190476191,
+        "Recoil": 1.0,
+        "Ammo capacity": 5.454545454545454,
+        "Projectile speed": -1.4285714285714286
+    },
+    "Shocker": {
+        "Damage": 1.5789473684210527,
+        "Accuracy": 4.0,
+        "Range": -0.6451612903225806,
+        "Rate of fire": -3.888888888888889,
+        "Reload speed": 1.0,
+        "Recoil": -1.5384615384615385,
+        "Ammo capacity": 0.47619047619047616,
+        "Projectile speed": 2.5
+    },
+    "Shotgun": {
+        "Damage": -13.191489361702128,
+        "Accuracy": -9.35483870967742,
+        "Range": -10.0,
+        "Rate of fire": -10.833333333333334,
+        "Reload speed": -7.037037037037037,
+        "Recoil": -10.0,
+        "Ammo capacity": -10.0,
+        "Projectile speed": -9.130434782608695
+    },
+    "SMG": {
+        "Damage": 9.130434782608695,
+        "Accuracy": 8.222222222222221,
+        "Range": 6.666666666666667,
+        "Rate of fire": 6.190476190476191,
+        "Reload speed": 7.083333333333333,
+        "Recoil": 6.8,
+        "Ammo capacity": 6.666666666666667,
+        "Projectile speed": 5.714285714285714
+    },
+    "Spreadgun": {
+        "Damage": 9.411764705882353,
+        "Accuracy": 8.75,
+        "Range": 9.0,
+        "Rate of fire": 9.444444444444445,
+        "Reload speed": 7.6,
+        "Recoil": 7.826086956521739,
+        "Ammo capacity": 7.586206896551724,
+        "Projectile speed": 9.18918918918919
+    }
+}
