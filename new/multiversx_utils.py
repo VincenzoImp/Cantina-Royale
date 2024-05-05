@@ -272,6 +272,7 @@ def parse_nft_data(nft):
     onchain_data['identifier'] = nft.get('identifier', None)
     onchain_data['collection'] = nft.get('collection', None)
     onchain_data['name'] = nft.get('name', None)
+    onchain_data['url'] = nft['media'][-1].get('url', None) if nft.get('media', []) != [] else None
     onchain_data['thumbnailUrl'] = nft['media'][-1].get('thumbnailUrl', None) if nft.get('media', []) != [] else None
     onchain_data['owner'] = nft.get('owner', None)
     onchain_data['rank'] = nft.get('rank', None)
