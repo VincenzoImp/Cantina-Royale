@@ -1,0 +1,60 @@
+{
+    "collection": "CRMYTH-546419",
+    "type": "NonFungibleESDT",
+    "name": "CRMYTH",
+    "ticker": "CRMYTH",
+    "owner": "erd1qqqqqqqqqqqqqpgq5dz6p0nsz35sht95kp6vjrznffzqpq79a9rsputqa4",
+    "timestamp": 1706257770,
+    "canFreeze": false,
+    "canWipe": false,
+    "canPause": false,
+    "canTransferNftCreateRole": false,
+    "canChangeOwner": false,
+    "canUpgrade": true,
+    "canAddSpecialRoles": true,
+    "assets": {
+        "website": "https://cantinaroyale.io",
+        "description": "Mythical Weapons are NFT weapons of fable and myth in Cantina Royale. Available in limited supply, they unlock unique play modes for competitive players.",
+        "status": "active",
+        "pngUrl": "https://media.elrond.com/tokens/asset/CRMYTH-546419/logo.png",
+        "svgUrl": "https://media.elrond.com/tokens/asset/CRMYTH-546419/logo.svg",
+        "social": {
+            "blog": "https://blog.cantinaroyale.io",
+            "twitter": "https://twitter.com/CantinaRoyale",
+            "whitepaper": "https://whitepaper.cantinaroyale.io",
+            "telegram": "https://t.me/CantinaRoyale",
+            "discord": "https://discord.gg/cantinaroyale"
+        }
+    },
+    "isVerified": true,
+    "holderCount": 14,
+    "nftCount": 578,
+    "canTransfer": true,
+    "roles": [
+        {
+            "canCreate": false,
+            "canBurn": false,
+            "canAddQuantity": false,
+            "canUpdateAttributes": false,
+            "canAddUri": false,
+            "roles": [
+                "ESDTRoleBurnForAll"
+            ]
+        },
+        {
+            "address": "erd1qqqqqqqqqqqqqpgq5dz6p0nsz35sht95kp6vjrznffzqpq79a9rsputqa4",
+            "canCreate": true,
+            "canBurn": true,
+            "canAddQuantity": false,
+            "canUpdateAttributes": true,
+            "canAddUri": true,
+            "roles": [
+                "ESDTRoleNFTCreate",
+                "ESDTRoleNFTBurn",
+                "ESDTRoleNFTUpdateAttributes",
+                "ESDTRoleNFTAddURI"
+            ]
+        }
+    ],
+    "totalNfts": 584
+}
