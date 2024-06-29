@@ -284,10 +284,10 @@ def parse_nft_data(nft):
             onchain_data[attibute] = 'None'
     # offchain data
     offchain_data = {}
-    offchain_data['priceCurrency'] = nft['offchain_data']['price']['currency']
-    offchain_data['priceAmount'] = nft['offchain_data']['price']['amount']
+    offchain_data['priceCurrency'] = nft['offchainData']['price']['currency']
+    offchain_data['priceAmount'] = nft['offchainData']['price']['amount']
     if onchain_data['collection'] in ['CRMYTH-546419', 'CRWEAPONS-e5ab49']:
-        for url, data in nft['offchain_data'].items():
+        for url, data in nft['offchainData'].items():
             if url.startswith('https://metadata.cantinaroyale.io/dynamic/'):
                 if 'error' in data:
                     for attibute in ['xp', 'wear', 'level', 'starLevel', 'Damage', 'Reload Time', 'Ammo', 'Range']:
@@ -299,9 +299,9 @@ def parse_nft_data(nft):
                                 offchain_data[attribute['name']] = attribute['value']
                         else:
                             offchain_data[key] = value
-        offchain_data['realPriceAmount'] = get_realPriceAmount(nft['offchain_data']['price']['amount'], offchain_data['starLevel'])
+        offchain_data['realPriceAmount'] = get_realPriceAmount(nft['offchainData']['price']['amount'], offchain_data['starLevel'])
     elif onchain_data['collection'] in ['CRCHAMPS-d0265d', 'CRHEROES-9edff2']:
-        for url, data in nft['offchain_data'].items():
+        for url, data in nft['offchainData'].items():
             if url.startswith('https://metadata.cantinaroyale.io/metadata/'):
                 if 'error' in data:
                     for attibute in ['Background', 'Body', 'Earrings', 'Eyes', 'Face', 'Head', 'Headgear', 'LegAccessories', 'Legs', 'Mouth', 'Perk 1', 'Perk 2', 'Rarity Class', 'Skin', 'Species']:
@@ -321,7 +321,7 @@ def parse_nft_data(nft):
                         else:
                             offchain_data[key] = value
     elif onchain_data['collection'] in ['GSPACEAPE-08bc2b', 'CEA-2d29f9']:
-        for url, data in nft['offchain_data'].items():
+        for url, data in nft['offchainData'].items():
             if url.startswith('https://metadata.verko.io/dynamic/'):
                 if 'error' in data:
                     for attibute in ['level', 'health', 'shield', 'talent_points_available', 'talent_points_total', 'earn_rate', 'character_tokens', 'Overachiever', 'Hodler', 'Grounded', 'Stonewall', 'Adrenaline Rush', 'Overshield', 'Black Widow', 'Galvanized', 'Nano Meds', 'Resilience', 'Cold Blooded', 'Perseverance', 'Escape Artist', 'Scavenger', 'Cool Moves', 'Brawler', 'Automatic Weapons Proficiency', 'Scatter Weapons Proficiency', 'Precision Weapons Proficiency', 'Explosive Weapons Proficiency', 'Elemental Weapons Proficiency']:
@@ -333,4 +333,11 @@ def parse_nft_data(nft):
                                 offchain_data[attribute['name']] = attribute['value']
                         else:
                             offchain_data[key] = value
-    return {**onchain_data, **offchain_data}
+    nft_data = {**onchain_data, **offchain_data}
+    new_nft_data = {}
+    for key, value in nft_data.items():
+        new_key = key.replace('_', ' ').split(' ')
+        new_key = ''.join([word[0].upper()+word[1:] for word in new_key])
+        new_key = new_key[0].lower() + new_key[1:]
+        new_nft_data[new_key] = value if value != "None" else None
+    return new_nft_data
