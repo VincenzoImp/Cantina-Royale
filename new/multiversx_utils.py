@@ -196,15 +196,13 @@ def open_stealth_driver(headless=False, maximize=True, options=None):
             )
     return driver
 
-def get_nft_price(stealth_driver, identifier, sleep_time=0.4):
-    currency_path = '/html/body/div[1]/div[1]/main/div[2]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]/div/div/div/img'
-    amount_path = '/html/body/div[1]/div[1]/main/div[2]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]/div/div/div/span'
+def get_nft_price(stealth_driver, identifier, sleep_time=4):
+    xpath = '/html/body/div[3]/div[2]/div/div/div[2]/div[2]/div[2]/section/div[1]/div/div[2]/div/span'
     try:
         url = f'https://xoxno.com/nft/{identifier}'
         stealth_driver.get(url)
         time.sleep(sleep_time)
-        currency = stealth_driver.find_element(By.XPATH, currency_path).get_attribute('src').split('/')[-1].split('.')[0].upper()
-        amount = stealth_driver.find_element(By.XPATH, amount_path).text
+        amount, currency = stealth_driver.find_element(By.XPATH, xpath).text.upper().split()
         amount = float(amount.replace('K', ''))*1000 if 'K' in amount else float(amount)
         return {
             'currency': currency,
